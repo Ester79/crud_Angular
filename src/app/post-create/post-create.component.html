@@ -1,0 +1,33 @@
+
+
+<div class="container page flex">
+  <form [formGroup]="formNewPost" (ngSubmit)="submit()">
+    <div class="col-log-4 col-xl-4 flex">
+    <div class="form-group mb-2 ">
+      <label>User ID</label>
+      <input type="number" formControlName="userId" [min]="0" class="form-control shadow" [(ngModel)]="newPostId.userId">
+      <div class="alert-warning shadow" *ngIf="formNewPost.get('userId')?.touched &&  formNewPost.get('userId')?.value == null || formNewPost.get('userId')?.value == undefined || formNewPost.get('userId')?.value == ''">
+        User Id is required
+    </div>
+    </div>
+    <div class="form-group mb-2">
+      <label>Title</label>
+      <input type="text" formControlName="title" class="form-control shadow" [(ngModel)]="newPostId.title">
+      <div class="alert-warning shadow" *ngIf="formNewPost.get('title')?.touched &&  formNewPost.get('title')?.value == null || formNewPost.get('title')?.value == ''">
+        Title description is required
+    </div>
+    </div>
+    <div class="form-group mb-2">
+      <label>Body</label>
+      <textarea  rows="6" formControlName="body" class="form-control shadow" [(ngModel)]="newPostId.body"></textarea>
+      <div class="alert-warning shadow" *ngIf="formNewPost.get('body')?.touched &&  formNewPost.get('body')?.value == null || formNewPost.get('body')?.value == ''">
+        Body description is required
+    </div>
+    </div>
+    <button class="btn btn-success formatBtn formatBtnConfirm" type="submit">Confirm</button>
+    <button class="btn btn-primary formatBtn formatBtnGoBack" [routerLink]="['/list']">GO BACK TO LIST</button>
+  </div>
+  </form>
+
+</div>
+

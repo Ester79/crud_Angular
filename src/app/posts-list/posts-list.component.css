@@ -1,0 +1,42 @@
+
+.formatButtons{
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 10px;
+}
+
+.formatButtons:hover{
+  background-color: white;
+  color: black;
+  box-shadow: 0 0 90px aqua, 0 0 50px aqua, 0 0 80px aqua;
+}
+
+.formatButtonCreate{
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+.formatButtonCreate:hover{
+  background-color: greenyellow;
+  color: black;
+}
+
+
+.bodyTable {
+  text-align: center;
+  font-size: 11px;
+}
+
+th {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background-color: blue;
+  color: white;
+}

@@ -1,0 +1,29 @@
+
+<div class="container">
+  <table class="table mt-5 align-middle">
+    <thead>
+      <tr>
+        <th class="fw-bold col-md1" scope="col">Post ID</th>
+        <th class="fw-bold col-md1" scope="col">ID</th>
+        <th class="fw-bold col-md1" scope="col">Name</th>
+        <th class="fw-bold col-md1" scope="col">email</th>
+        <th class="fw-bold col-md1" scope="col">Comments</th>
+      </tr>
+    </thead>
+    <tbody class="bodyTableComments">
+      <tr *ngFor="let comment of commentsList">
+        <td>{{comment.postId}}</td>
+        <td>{{comment.id}}</td>
+        <td>{{comment.name}}</td>
+        <td>{{comment.email}}</td>
+        <td>{{comment.body}}</td>
+      </tr>
+    </tbody>
+
+  </table>
+  <div>
+    <button class="btn btn-primary formatBtnGoBack " [routerLink]="['/list']">GO BACK TO LIST</button>
+  </div>
+
+
+</div>

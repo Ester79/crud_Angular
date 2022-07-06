@@ -1,0 +1,42 @@
+
+
+<div class="container mainContainer">
+  <div class="form-group">
+    <input  type="text" class="forms-control" placeholder="Search by User ID" [(ngModel)]="filterPost" name="filterPost">
+  </div>
+  <div class="mt-4">
+    <button class="btn btn-success formatButtonCreate" [routerLink]="['/create']" (click)="createNewPost()">Create New Post</button>
+  </div>
+    <table class="table  mt-5 align-middle table-hover">
+      <thead>
+        <tr>
+          <th class="fw-bold col-md-1" scope="col">Post ID</th>
+          <th class="fw-bold col-md-1" scope="col">User ID</th>
+          <th class="fw-bold col-md-3" scope="col">Title</th>
+          <th class="fw-bold col-md-5" scope="col">Comments</th>
+          <th class="fw-bold col-md-1" scope="col"></th>
+          <th class="fw-bold col-md-1" scope="col"></th>
+          <th class="fw-bold col-md-1" scope="col"></th>
+        </tr>
+      </thead>
+      <tbody class="bodyTable">
+        <tr *ngFor="let post of postList | filter:filterPost">
+          <td>{{post.id}}</td>
+          <td>{{post.userId}}</td>
+          <td>{{post.title}}</td>
+          <td>{{post.body}}</td>
+          <td><button type="button" class="btn btn-primary formatButtons" [routerLink]="['/comments']" (click)="selectedPostID(post)">Comments</button></td>
+          <td><button type="button" class="btn btn-success formatButtons"  [routerLink]="['/create']" (click)="selectedPostID(post)">Update</button></td>
+          <td><button type="button" class="btn btn-danger formatButtons" (click)="deletePost(post)">Delete</button></td>
+        </tr>
+
+      </tbody>
+
+    </table>
+
+
+
+
+</div>
+
+

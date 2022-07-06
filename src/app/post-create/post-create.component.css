@@ -1,0 +1,25 @@
+.page{
+  height: 900px;
+  margin-top: 150px;
+}
+
+.formatBtn{
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  margin-right: 20px;
+  margin-top: 20px;
+}
+
+.formatBtnConfirm:hover{
+  background-color: yellowgreen;
+}
+
+.formatBtnGoBack:hover{
+  background-color: aqua;
+  color: black;
+}
+
+
+
